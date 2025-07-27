@@ -3,7 +3,7 @@ services:
     runtime: node
     name: documenso-app
     plan: free
-    buildCommand: npm i && NEXT_PRIVATE_DATABASE_URL="postgresql://user:pass@localhost/db" NEXT_PRIVATE_DIRECT_DATABASE_URL="postgresql://user:pass@localhost/db" npx turbo run build --filter=@documenso/remix
+    buildCommand: npm i && NODE_OPTIONS="--max-old-space-size=2048" NEXT_PRIVATE_DATABASE_URL="postgresql://user:pass@localhost/db" NEXT_PRIVATE_DIRECT_DATABASE_URL="postgresql://user:pass@localhost/db" npx turbo run build --filter=@documenso/remix
     startCommand: npx prisma migrate deploy --schema packages/prisma/schema.prisma && cd apps/remix && NODE_ENV=production node build/server/main.js
     healthCheckPath: /api/health
 
