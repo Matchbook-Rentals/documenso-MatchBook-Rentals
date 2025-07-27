@@ -77,7 +77,6 @@ export default defineConfig({
    * See rollup.config.mjs which is used for that.
    */
   build: {
-    sourcemap: false,
     rollupOptions: {
       external: [
         '@node-rs/bcrypt',
