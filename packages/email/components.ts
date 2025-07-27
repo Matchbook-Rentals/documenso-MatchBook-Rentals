@@ -1,5 +1,3 @@
-import type React from 'react';
-
 export { Body } from '@react-email/body';
 export { Button } from '@react-email/button';
 export { Column } from '@react-email/column';
@@ -15,7 +13,5 @@ export { Preview } from '@react-email/preview';
 export { render } from '@react-email/render';
 export { Row } from '@react-email/row';
 export { Section } from '@react-email/section';
-// Tailwind removed due to ESM compatibility issues
-export const Tailwind = async ({ children }: { children: React.ReactNode; config?: unknown }) =>
-  children;
+export { Tailwind } from '@react-email/tailwind';
 export { Text } from '@react-email/text';

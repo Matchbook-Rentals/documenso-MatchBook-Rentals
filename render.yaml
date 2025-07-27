@@ -44,13 +44,13 @@ services:
       - key: NEXT_PRIVATE_INTERNAL_WEBAPP_URL
         value: 'http://localhost:10000'
 
-      # SMTP (Disabled but valid config)
+      # SMTP (Disabled)
       - key: NEXT_PRIVATE_SMTP_TRANSPORT
         value: 'smtp-auth'
       - key: NEXT_PRIVATE_SMTP_HOST
-        value: 'smtp.gmail.com'
+        value: 'localhost'
       - key: NEXT_PRIVATE_SMTP_PORT
-        value: '587'
+        value: '1025'
       - key: NEXT_PRIVATE_SMTP_USERNAME
         value: ''
       - key: NEXT_PRIVATE_SMTP_PASSWORD
