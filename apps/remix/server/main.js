@@ -30,4 +30,11 @@ server.use(
 
 const handler = handle(build, server);
 
-serve({ fetch: handler.fetch, port: 3000 });
+const port = process.env.PORT || 3000;
+const hostname = '0.0.0.0'; // Bind to all interfaces for Render
+console.log(`Starting server on ${hostname}:${port}`);
+serve({
+  fetch: handler.fetch,
+  port: Number(port),
+  hostname: hostname,
+});
