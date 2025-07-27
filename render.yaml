@@ -10,7 +10,7 @@ services:
     envVars:
       # Node Version
       - key: NODE_VERSION
-        value: 20.9.0
+        value: 18.17.0
 
       - key: PORT
         value: 10000
@@ -44,21 +44,21 @@ services:
       - key: NEXT_PRIVATE_INTERNAL_WEBAPP_URL
         value: 'http://localhost:10000'
 
-      # SMTP (Disabled)
+      # SMTP
       - key: NEXT_PRIVATE_SMTP_TRANSPORT
         value: 'smtp-auth'
       - key: NEXT_PRIVATE_SMTP_HOST
-        value: 'localhost'
+        sync: false
       - key: NEXT_PRIVATE_SMTP_PORT
-        value: '1025'
+        sync: false
       - key: NEXT_PRIVATE_SMTP_USERNAME
-        value: ''
+        sync: false
       - key: NEXT_PRIVATE_SMTP_PASSWORD
-        value: ''
+        sync: false
       - key: NEXT_PRIVATE_SMTP_FROM_NAME
-        value: 'MatchBook Rentals'
+        sync: false
       - key: NEXT_PRIVATE_SMTP_FROM_ADDRESS
-        value: 'noreply@matchbookrentals.com'
+        sync: false
 
       # Stripe
       - key: NEXT_PRIVATE_STRIPE_API_KEY
@@ -102,11 +102,11 @@ services:
 
       # Signing
       - key: NEXT_PRIVATE_SIGNING_TRANSPORT
-        value: 'local'
+        sync: false
       - key: NEXT_PRIVATE_SIGNING_PASSPHRASE
-        value: 'matchbook-secure-2024'
+        sync: false
       - key: NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH
-        value: '/opt/render/project/src/certs/cert.p12'
+        sync: false
       - key: NEXT_PRIVATE_SIGNING_LOCAL_FILE_CONTENTS
         sync: false
       - key: NEXT_PRIVATE_SIGNING_GCLOUD_HSM_KEY_PATH
@@ -124,9 +124,7 @@ services:
       - key: NEXT_PRIVATE_SMTP_APIKEY
         sync: false
       - key: NEXT_PRIVATE_SMTP_SECURE
-        value: 'false'
-      - key: NEXT_PRIVATE_SMTP_UNSAFE_IGNORE_TLS
-        value: 'true'
+        sync: false
       - key: NEXT_PRIVATE_RESEND_API_KEY
         sync: false
       - key: NEXT_PRIVATE_MAILCHANNELS_API_KEY
