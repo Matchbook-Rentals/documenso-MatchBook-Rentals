@@ -16,7 +16,6 @@ export { render } from '@react-email/render';
 export { Row } from '@react-email/row';
 export { Section } from '@react-email/section';
 // Tailwind removed due to ESM compatibility issues
-export const Tailwind: React.FC<{ children: React.ReactNode; config?: unknown }> = async ({
-  children,
-}) => children;
+export const Tailwind = async ({ children }: { children: React.ReactNode; config?: unknown }) =>
+  children;
 export { Text } from '@react-email/text';
